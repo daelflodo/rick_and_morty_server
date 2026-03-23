@@ -20,9 +20,10 @@ app.add_middleware(
     allow_origins=[
         "http://localhost:3000",
         "http://localhost:5173",
+        "https://rick-and-morty-client-iota.vercel.app",
         "https://rick-and-morty-client-55y4ml432-daelflodos-projects.vercel.app",
-        "https://*.vercel.app",
     ],
+    allow_origin_regex=r"https://rick-and-morty-client.*\.vercel\.app",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
